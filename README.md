@@ -165,7 +165,7 @@ We'll point our skill at the URL for our development server. Select HTTPS as the
 
 If your development server is running on a server that is already available on the internet, type its URL (such as `https://geemusic.example.com/alexa`). Make sure you include the `/alexa`, otherwise this won't work!
 
-If you are running the server on a computer behind a firewall we'll need to expose the server via a tunnel in order for this to work. I usually use [ngrok](https://ngrok.com/) for these situations and have used it to develop this project. To start a tunnel run `ngrok http 4000` in a console window. You should then see a few URLs, one of which being a publicly accessible HTTPS link to your development server. Copy this URL, being sure to append `/alexa` so the final result looks something like `https://[some-code].ngrok.io/alexa`. **Important:** Make sure you update your `.env` file's `APP_URL` to this new URL, otherwise Alexa will not be able to stream music!
+If you are running the server on a computer behind a firewall we'll need to expose the server via a tunnel in order for this to work. I usually use [ngrok](https://ngrok.com/) for these situations and have used it to develop this project. To start a tunnel run `ngrok http 4000` in a console window. You should then see a few URLs, one of which being a publicly accessible HTTPS link to your development server. Copy this URL, being sure to append `/alexa` so the final result looks something like `https://[some-code].ngrok.io/alexa`. **Important:** Make sure you update your `.env` file's `APP_URL` to this new URL (without the /alex appended), otherwise Alexa will not be able to stream music!
 
 You'll also want to select "No" for the "Account Linking" field before moving on.
 
